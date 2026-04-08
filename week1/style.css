@@ -1,0 +1,184 @@
+/* 기본 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f4f6;
+  font-family: Arial, sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* 전체 페이지 레이아웃 */
+.page {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ----------------------------- */
+/* 요약 카드 영역 */
+/* ----------------------------- */
+.profile-card {
+  background-color: white;
+  border-radius: 18px;
+  padding: 25px;
+
+  display: flex;           /* Flexbox 사용 조건 충족 */
+  align-items: center;
+  gap: 20px;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+.profile-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* 이미지 영역 (정사각형) */
+.profile-card__image {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 2px solid #e5e7eb;
+}
+
+.profile-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 정사각형 비율 유지 */
+}
+
+/* 텍스트 영역 */
+.profile-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.profile-card__name {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.profile-card__part {
+  font-size: 15px;
+  font-weight: 600;
+  color: #555;
+}
+
+.profile-card__intro {
+  font-size: 14px;
+  color: #444;
+}
+
+/* ----------------------------- */
+/* 상세 정보 영역 */
+/* ----------------------------- */
+.detail {
+  background-color: white;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.detail {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.detail:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.detail__title {
+  font-size: 22px;
+  font-weight: 700;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* 상세 섹션 */
+.detail__section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.detail__section:hover {
+  background-color: #f9fafb;
+  transform: translateY(-3px);
+}
+
+.detail__section-title {
+  transition: color 0.2s ease;
+}
+
+.detail__section:hover .detail__section-title {
+  color: #2563eb;
+}
+
+/* 리스트 */
+.detail__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* 기술 목록 */
+.detail__skills {
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+.detail__text {
+  font-size: 14px;
+  color: #333;
+}
+
+/* 링크 */
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.detail__skills li {
+  transition: transform 0.15s ease;
+}
+
+.detail__skills li:hover {
+  transform: translateX(6px);
+}
